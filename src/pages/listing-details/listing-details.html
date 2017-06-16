@@ -1,0 +1,25 @@
+<ion-header *ngIf="listing">
+
+  <ion-navbar>
+    <ion-title>{{listing.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding *ngIf="listing">
+  <h1>{{listing.name}}</h1>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <p><strong>Business Name: </strong> {{listing.name}}</p>
+        <p><strong>City: </strong> {{listing.city}}</p>
+      </ion-col>
+      <ion-col col-6>
+        <p><strong>Owner: </strong> {{listing.owner}}</p>
+        <p><strong>Email: </strong> {{listing.email}}</p>
+        <p><strong>Phone: </strong> {{listing.phone}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

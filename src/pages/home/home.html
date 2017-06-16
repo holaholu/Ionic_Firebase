@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>MobileBiz</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button *ngIf="!(af.auth | async)" ion-button block (click)="login()" color="danger">Login With Google</button>
+  <button *ngIf="(af.auth | async)" ion-button block (click)="logout()">Logout</button>
+  <hr><br>
+  <div *ngIf="!(af.auth | async)">
+    <h2>Welcome</h2>
+    <p>Please authenticate to view listings</p>
+  </div>
+
+  <div *ngIf="(af.auth | async)">
+    <h2>Business Listings</h2>
+    <ion-list>
+      <button ion-item *ngFor="let listing of listings" (click)="listingSelected(listing)">
+        {{listing.name}}
+      </button>
+    </ion-list>
+  </div>
+</ion-content>

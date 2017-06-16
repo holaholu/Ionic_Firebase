@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Business</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (submit)="onAddSubmit()">
+    <ion-list>
+    <ion-item>
+      <ion-label fixed>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="business.name" name="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Owner</ion-label>
+      <ion-input type="text" [(ngModel)]="business.owner" name="owner"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Email</ion-label>
+      <ion-input type="text" [(ngModel)]="business.email" name="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Phone</ion-label>
+      <ion-input type="text" [(ngModel)]="business.phone" name="phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>City</ion-label>
+      <ion-input type="text" [(ngModel)]="business.city" name="city"></ion-input>
+    </ion-item>
+
+    <button ion-button type="submit" block>Add Business</button>
+
+  </ion-list>
+  </form>
+</ion-content>
